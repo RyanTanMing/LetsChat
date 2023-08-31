@@ -1,14 +1,14 @@
 
 //ADD YOUR FIREBASE LINKS HERE
 const firebaseConfig = {
-      apiKey: "AIzaSyCPVF-w-YWTe19oVv6UJBoKu-pWFRjO-vs",
-      authDomain: "kwitter-7f9f1.firebaseapp.com",
-      databaseURL: "https://kwitter-7f9f1-default-rtdb.firebaseio.com",
-      projectId: "kwitter-7f9f1",
-      storageBucket: "kwitter-7f9f1.appspot.com",
-      messagingSenderId: "25347107610",
-      appId: "1:25347107610:web:9e641689e2fb933d57daa3"
-};
+      apiKey: "AIzaSyCmV4HZ_0wELw6giOaldpwxgt66qnElcEw",
+      authDomain: "letschat-f2097.firebaseapp.com",
+      databaseURL: "https://letschat-f2097-default-rtdb.firebaseio.com",
+      projectId: "letschat-f2097",
+      storageBucket: "letschat-f2097.appspot.com",
+      messagingSenderId: "1024353378123",
+      appId: "1:1024353378123:web:f30d06d591139d35ec92ce"
+    };
 // Initialize Firebase
 document.getElementById("Welcome").innerHTML = "Welcome " + localStorage.getItem("username")
 firebase.initializeApp(firebaseConfig);
@@ -37,4 +37,9 @@ function redirecttoroomname(name) {
       console.log(name)
       localStorage.setItem('room_name', room_name)
       window.location = "kwitter_page.html"
+}
+function logout() {
+      localStorage.removeItem('room_name')
+      localStorage.removeItem('username')
+      window.location='index.html'
 }
